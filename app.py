@@ -239,7 +239,6 @@ async function processPhoto() {
                 const baleNum = item.bale ? String(item.bale).padStart(3, '0') : '000';
                 const fileName = `[${baleNum}] BALE.jpg`;
                 
-                // Convert Base64 back to Blob for Share/Download APIs
                 const byteCharacters = atob(item.base64);
                 const byteNumbers = new Array(byteCharacters.length);
                 for (let i = 0; i < byteCharacters.length; i++) {
@@ -310,7 +309,7 @@ function downloadPreviewImage(index) {
 # =========================================================
 # CAPTION PARSER LOGIC
 # =========================================================
-function parse_caption(text):
+def parse_caption(text):
     lines = [line.strip() for line in text.strip().splitlines() if line.strip()]
     parsed = {
         "container": "",
