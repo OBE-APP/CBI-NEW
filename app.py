@@ -1,4 +1,3 @@
-```python
 import base64
 import io
 import os
@@ -1172,4 +1171,3 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=5000
     )
-```
